@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+.venv/
+data/sessions.prev.json

@@ -1,0 +1,175 @@
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --border: #e4e2dd;
+  --text: #1c1b1a;
+  --text-muted: #6b6863;
+  --accent: #2f6f4f;
+  --accent-bg: #e8f3ec;
+  --waitlist: #b8860b;
+  --waitlist-bg: #fbf1dc;
+  --full: #a33b3b;
+  --full-bg: #f8e9e9;
+  --chip-bg: #efeee9;
+  --chip-active-bg: #1c1b1a;
+  --chip-active-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181a;
+    --surface: #1f2023;
+    --border: #33353a;
+    --text: #f0efec;
+    --text-muted: #a3a19b;
+    --accent: #6fbf94;
+    --accent-bg: #1d3327;
+    --waitlist: #e0b84a;
+    --waitlist-bg: #3a3121;
+    --full: #e08080;
+    --full-bg: #3a2323;
+    --chip-bg: #2a2b2f;
+    --chip-active-bg: #f0efec;
+    --chip-active-text: #17181a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 64px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.updated-at {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  background: var(--chip-bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--chip-active-bg);
+  color: var(--chip-active-text);
+  border-color: var(--chip-active-bg);
+}
+
+.day-group {
+  margin-bottom: 24px;
+}
+
+.day-group h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+}
+
+.session-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.session-card:hover {
+  border-color: var(--accent);
+}
+
+.session-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.session-name {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.status-badge {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-open {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.status-waitlist {
+  background: var(--waitlist-bg);
+  color: var(--waitlist);
+}
+
+.status-full,
+.status-closed {
+  background: var(--full-bg);
+  color: var(--full);
+}
+
+.status-unknown {
+  background: var(--chip-bg);
+  color: var(--text-muted);
+}
+
+.session-meta {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.empty-state {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 24px 0;
+  text-align: center;
+}

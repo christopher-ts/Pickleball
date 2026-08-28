@@ -1,0 +1,56 @@
+name: Poll pickleball sessions
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: poll-pickleball
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install --with-deps chromium
+
+      - name: Stage previous snapshot for diffing
+        run: |
+          if [ -f data/sessions.json ]; then
+            cp data/sessions.json data/sessions.prev.json
+          fi
+
+      - name: Scrape current sessions
+        run: python scraper/scrape.py
+
+      - name: Send notifications for new/opened sessions
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python scraper/notify.py
+
+      - name: Commit updated data if changed
+        run: |
+          rm -f data/sessions.prev.json
+          git config user.name "pickleball-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sessions.json data/debug_capture.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update scraped session data"
+            git push
+          else
+            echo "No changes to commit."
+          fi
