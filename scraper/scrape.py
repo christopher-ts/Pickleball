@@ -78,11 +78,13 @@ def build_session_entry(item: dict) -> dict:
     except (TypeError, ValueError):
         openings_int = None
 
+    has_register_link = bool(action.get("href") or enroll.get("href"))
+
     if status_desc.lower() == "full" or openings_int == 0:
         status = "Full"
     elif "wait" in status_desc.lower():
         status = "Waitlist"
-    elif action.get("href"):
+    elif has_register_link or (openings_int is not None and openings_int > 0):
         status = "Open"
     else:
         status = status_desc or "Unknown"
