@@ -1,11 +1,12 @@
 """Scrapes Santa Monica Rec's ActiveCommunities site for open-play pickleball
 sessions and writes data/sessions.json.
 
-Because the search page is a client-rendered Angular app, we drive a real
-headless browser (Playwright) rather than issuing plain HTTP requests. While
-the page loads we also record every XHR/fetch response so the underlying
-JSON API (if any) can be discovered and reused directly in later revisions
-of this script -- see data/debug_capture.json.
+The search page is a client-rendered Angular app backed by a JSON API at
+POST /rest/activities/list. We drive a real headless browser (Playwright) to
+load the search page -- which establishes whatever session/cookies the API
+needs and fires that request itself -- and capture the response directly
+rather than trying to replay the request by hand. Confirmed against a real
+run on 2026-08-29; see data/debug_capture.json for the raw shape.
 """
 
 from __future__ import annotations
@@ -22,100 +23,96 @@ SEARCH_URL = (
     "?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball"
 )
 
+ACTIVITY_LIST_URL_FRAGMENT = "/rest/activities/list"
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 SESSIONS_PATH = DATA_DIR / "sessions.json"
 DEBUG_PATH = DATA_DIR / "debug_capture.json"
 
-# Only sessions whose name/description looks like open play / drop-in are kept.
+# Only sessions whose name looks like open play / drop-in are kept.
 OPEN_PLAY_PATTERN = re.compile(r"open\s*play|drop[\s-]?in", re.IGNORECASE)
 
-MAX_CAPTURED_RESPONSES = 40
-MAX_BODY_CHARS = 50_000
+MAX_MISC_CAPTURED_RESPONSES = 10
+MAX_MISC_BODY_CHARS = 5_000
 
 
-def capture_network(page, captured: list[dict]) -> None:
+def capture_network(page, activity_list_bodies: list[dict], misc_captured: list[dict]) -> None:
     def on_response(response):
-        if len(captured) >= MAX_CAPTURED_RESPONSES:
-            return
         url = response.url
+        if ACTIVITY_LIST_URL_FRAGMENT in url and response.request.method == "POST":
+            try:
+                activity_list_bodies.append(response.json())
+            except Exception as exc:  # noqa: BLE001 - best effort diagnostics
+                misc_captured.append({"url": url, "parse_error": str(exc)})
+            return
+
+        if len(misc_captured) >= MAX_MISC_CAPTURED_RESPONSES:
+            return
         content_type = response.headers.get("content-type", "")
         if "json" not in content_type and "/rest/" not in url:
             return
-        entry = {
-            "url": url,
-            "method": response.request.method,
-            "status": response.status,
-            "request_post_data": response.request.post_data,
-        }
+        entry = {"url": url, "method": response.request.method, "status": response.status}
         try:
             body = response.text()
-            if len(body) > MAX_BODY_CHARS:
-                body = body[:MAX_BODY_CHARS] + "...<truncated>"
+            if len(body) > MAX_MISC_BODY_CHARS:
+                body = body[:MAX_MISC_BODY_CHARS] + "...<truncated>"
             entry["body"] = body
         except Exception as exc:  # noqa: BLE001 - best effort diagnostics
             entry["body_error"] = str(exc)
-        captured.append(entry)
+        misc_captured.append(entry)
 
     page.on("response", on_response)
 
 
-def find_activity_records(node, found: list[dict], seen_ids: set) -> None:
-    """Recursively search parsed JSON for dict records that look like
-    activity/session entries (have some kind of name field mentioning
-    pickleball)."""
-    if isinstance(node, dict):
-        name_val = None
-        for key, val in node.items():
-            if isinstance(val, str) and "name" in key.lower() and "pickleball" in val.lower():
-                name_val = val
-                break
-        if name_val:
-            record_id = json.dumps(node, sort_keys=True, default=str)[:200]
-            if record_id not in seen_ids:
-                seen_ids.add(record_id)
-                found.append(node)
-        for val in node.values():
-            find_activity_records(val, found, seen_ids)
-    elif isinstance(node, list):
-        for item in node:
-            find_activity_records(item, found, seen_ids)
+def build_session_entry(item: dict) -> dict:
+    urgent = item.get("urgent_message") or {}
+    status_desc = (urgent.get("status_description") or "").strip()
+    action = item.get("action_link") or {}
+    enroll = item.get("enroll_now") or {}
+    register_url = action.get("href") or enroll.get("href") or item.get("detail_url")
 
+    openings = item.get("openings")
+    try:
+        openings_int = int(openings) if openings not in (None, "") else None
+    except (TypeError, ValueError):
+        openings_int = None
 
-def build_session_entry(raw: dict) -> dict:
-    """Best-effort normalization of a raw record into our session schema.
-    Field names are guesses to be refined once we see real API output."""
+    if status_desc.lower() == "full" or openings_int == 0:
+        status = "Full"
+    elif "wait" in status_desc.lower():
+        status = "Waitlist"
+    elif action.get("href"):
+        status = "Open"
+    else:
+        status = status_desc or "Unknown"
 
-    def first_str(*keys):
-        for k in keys:
-            v = raw.get(k)
-            if isinstance(v, str) and v.strip():
-                return v.strip()
-        return None
+    location = (item.get("location") or {}).get("label")
 
     return {
-        "id": first_str("id", "activity_id", "activityId") or None,
-        "name": first_str("name", "activity_name", "activityName"),
-        "day": first_str("day", "days", "day_of_week"),
-        "time": first_str("time", "activity_time", "time_range"),
-        "date_range": first_str("date_range", "dates"),
-        "location": first_str("location", "center", "facility", "center_name"),
-        "status": first_str("status", "activity_status", "availability"),
-        "spots_left": raw.get("spots_left") or raw.get("openings"),
-        "price": first_str("price", "fee"),
-        "register_url": first_str("register_url", "url", "activity_url"),
-        "raw": raw,
+        "id": str(item.get("id")),
+        "name": item.get("name"),
+        "day": item.get("days_of_week"),
+        "time": item.get("time_range"),
+        "date_range": item.get("date_range"),
+        "location": location,
+        "status": status,
+        "spots_left": openings_int,
+        "activity_number": item.get("number"),
+        "register_url": register_url,
+        "detail_url": item.get("detail_url"),
     }
 
 
 def scrape() -> dict:
     DATA_DIR.mkdir(exist_ok=True)
-    captured: list[dict] = []
+    activity_list_bodies: list[dict] = []
+    misc_captured: list[dict] = []
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page()
-        capture_network(page, captured)
+        capture_network(page, activity_list_bodies, misc_captured)
 
         page.goto(SEARCH_URL, wait_until="networkidle", timeout=45_000)
         try:
@@ -124,42 +121,33 @@ def scrape() -> dict:
         except Exception:  # noqa: BLE001 - best effort, keep going regardless
             pass
 
-        rendered_text = page.inner_text("body")
-        rendered_html_len = len(page.content())
-
         browser.close()
 
     DEBUG_PATH.write_text(
         json.dumps(
             {
                 "search_url": SEARCH_URL,
-                "captured_responses": captured,
-                "rendered_text_sample": rendered_text[:5_000],
-                "rendered_html_length": rendered_html_len,
+                "activity_list_responses": activity_list_bodies,
+                "misc_captured_responses": misc_captured,
             },
             indent=2,
             default=str,
         )
     )
 
-    found_records: list[dict] = []
-    seen_ids: set = set()
-    for entry in captured:
-        body = entry.get("body")
-        if not body:
-            continue
-        try:
-            parsed = json.loads(body)
-        except (json.JSONDecodeError, TypeError):
-            continue
-        find_activity_records(parsed, found_records, seen_ids)
+    items_by_id: dict[str, dict] = {}
+    for resp in activity_list_bodies:
+        for item in (resp.get("body") or {}).get("activity_items", []):
+            item_id = item.get("id")
+            if item_id is not None:
+                items_by_id[item_id] = item
 
-    sessions = [build_session_entry(r) for r in found_records]
     sessions = [
-        s
-        for s in sessions
-        if s["name"] and (OPEN_PLAY_PATTERN.search(s["name"]) or not sessions)
+        build_session_entry(item)
+        for item in items_by_id.values()
+        if item.get("name") and OPEN_PLAY_PATTERN.search(item["name"])
     ]
+    sessions.sort(key=lambda s: (s["day"] or "", s["time"] or ""))
 
     output = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
