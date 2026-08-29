@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-29T18:09:39.835792+00:00",
+  "scraped_at": "2026-08-29T20:58:44.965976+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
   "session_count": 6,
   "sessions": [
@@ -10,10 +10,10 @@
       "time": "5:00 PM - 8:00 PM",
       "date_range": "Aug. 31, 5pm",
       "location": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
-      "status": "Open",
-      "spots_left": 1,
+      "status": "Full",
+      "spots_left": 0,
       "activity_number": "7908.037",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107718?locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107718?wishlist_id=0&locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-mon-aug-31/107718?locale=en-US"
     },
     {
@@ -24,7 +24,7 @@
       "date_range": "Aug. 30, 11am",
       "location": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 26,
+      "spots_left": 23,
       "activity_number": "7908.036",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107705?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-aug-30-session-2/107705?locale=en-US"
@@ -50,7 +50,7 @@
       "date_range": "Sept. 3. 5pm",
       "location": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 68,
+      "spots_left": 67,
       "activity_number": "7909.003",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107866?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-thurs-sept-3/107866?locale=en-US"
@@ -63,7 +63,7 @@
       "date_range": "September 1, 5pm",
       "location": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 30,
+      "spots_left": 26,
       "activity_number": "7909.001",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107868?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-tues-sept-1/107868?locale=en-US"
@@ -76,7 +76,7 @@
       "date_range": "Sept. 2, 5pm",
       "location": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 24,
+      "spots_left": 23,
       "activity_number": "7909.035",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/109800?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-weds-sept-2/109800?locale=en-US"
