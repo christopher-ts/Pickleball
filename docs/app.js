@@ -1,5 +1,7 @@
 const DATA_URL = "sessions.json";
 
+const WEEKDAY_ORDER = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
 const state = {
   sessions: [],
   dayFilter: "All",
@@ -14,51 +16,67 @@ function statusClass(status) {
   return "status-unknown";
 }
 
-function uniqueValues(sessions, key) {
+function sortByWeekday(values) {
+  return values.sort((a, b) => {
+    const ai = WEEKDAY_ORDER.indexOf(a);
+    const bi = WEEKDAY_ORDER.indexOf(b);
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
+}
+
+function uniqueValues(sessions, key, sorter = (vals) => vals.sort()) {
   const values = new Set();
   for (const s of sessions) {
     if (s[key]) values.add(s[key]);
   }
-  return ["All", ...Array.from(values).sort()];
+  return sorter(Array.from(values));
+}
+
+function renderFilterGroup(container, label, options, activeValue, onSelect) {
+  if (options.length === 0) return;
+
+  const group = document.createElement("div");
+  group.className = "filter-group";
+
+  const heading = document.createElement("div");
+  heading.className = "filter-label";
+  heading.textContent = label;
+  group.appendChild(heading);
+
+  const row = document.createElement("div");
+  row.className = "chip-row";
+  ["All", ...options].forEach((value) => {
+    const btn = document.createElement("button");
+    btn.className = "chip";
+    btn.textContent = value;
+    btn.setAttribute("aria-pressed", String(activeValue === value));
+    btn.addEventListener("click", () => onSelect(value));
+    row.appendChild(btn);
+  });
+  group.appendChild(row);
+
+  container.appendChild(group);
 }
 
 function renderFilters() {
   const container = document.getElementById("filters");
   container.innerHTML = "";
 
-  const days = uniqueValues(state.sessions, "day");
+  const days = uniqueValues(state.sessions, "day", sortByWeekday);
   const locations = uniqueValues(state.sessions, "location");
 
-  const makeChip = (label, active, onClick) => {
-    const btn = document.createElement("button");
-    btn.className = "chip";
-    btn.textContent = label;
-    btn.setAttribute("aria-pressed", String(active));
-    btn.addEventListener("click", onClick);
-    return btn;
-  };
-
-  days.forEach((day) => {
-    container.appendChild(
-      makeChip(day, state.dayFilter === day, () => {
-        state.dayFilter = day;
-        render();
-      })
-    );
+  renderFilterGroup(container, "Day", days, state.dayFilter, (value) => {
+    state.dayFilter = value;
+    render();
   });
 
   if (locations.length > 1) {
-    const divider = document.createElement("span");
-    divider.style.width = "100%";
-    divider.style.height = "0";
-    container.appendChild(divider);
-    locations.forEach((loc) => {
-      container.appendChild(
-        makeChip(loc, state.locationFilter === loc, () => {
-          state.locationFilter = loc;
-          render();
-        })
-      );
+    renderFilterGroup(container, "Location", locations, state.locationFilter, (value) => {
+      state.locationFilter = value;
+      render();
     });
   }
 }
@@ -90,8 +108,10 @@ function renderResults() {
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(s);
   }
+  const orderedDays = sortByWeekday(Array.from(groups.keys()));
 
-  for (const [day, items] of groups) {
+  for (const day of orderedDays) {
+    const items = groups.get(day);
     const group = document.createElement("section");
     group.className = "day-group";
 

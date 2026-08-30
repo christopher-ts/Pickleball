@@ -33,6 +33,25 @@ DEBUG_PATH = DATA_DIR / "debug_capture.json"
 # Only sessions whose name looks like open play / drop-in are kept.
 OPEN_PLAY_PATTERN = re.compile(r"open\s*play|drop[\s-]?in", re.IGNORECASE)
 
+# The API returns full street addresses (e.g. "1401 Olympic Blvd. Memorial
+# Park Tennis/Pickleball Courts"). Shorten to just the facility name for
+# display; add entries here as new facilities show up.
+LOCATION_SHORT_NAMES = {
+    "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts": "Memorial Park",
+}
+ADDRESS_PREFIX_PATTERN = re.compile(r"^\d+[^,]*?(?:Blvd\.|St\.|Ave\.|Avenue|Street|Dr\.|Drive)\s*")
+PARK_NAME_PATTERN = re.compile(r"^(.*?\bPark\b)")
+
+
+def short_location(label: str | None) -> str | None:
+    if not label:
+        return label
+    if label in LOCATION_SHORT_NAMES:
+        return LOCATION_SHORT_NAMES[label]
+    stripped = ADDRESS_PREFIX_PATTERN.sub("", label).strip()
+    match = PARK_NAME_PATTERN.search(stripped)
+    return match.group(1) if match else (stripped or label)
+
 MAX_MISC_CAPTURED_RESPONSES = 10
 MAX_MISC_BODY_CHARS = 5_000
 
@@ -89,7 +108,7 @@ def build_session_entry(item: dict) -> dict:
     else:
         status = status_desc or "Unknown"
 
-    location = (item.get("location") or {}).get("label")
+    location_full = (item.get("location") or {}).get("label")
 
     return {
         "id": str(item.get("id")),
@@ -97,7 +116,8 @@ def build_session_entry(item: dict) -> dict:
         "day": item.get("days_of_week"),
         "time": item.get("time_range"),
         "date_range": item.get("date_range"),
-        "location": location,
+        "location": short_location(location_full),
+        "location_full": location_full,
         "status": status,
         "spots_left": openings_int,
         "activity_number": item.get("number"),
@@ -149,7 +169,8 @@ def scrape() -> dict:
         for item in items_by_id.values()
         if item.get("name") and OPEN_PLAY_PATTERN.search(item["name"])
     ]
-    sessions.sort(key=lambda s: (s["day"] or "", s["time"] or ""))
+    weekday_order = {day: i for i, day in enumerate(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])}
+    sessions.sort(key=lambda s: (weekday_order.get(s["day"], 99), s["time"] or ""))
 
     output = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),

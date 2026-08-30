@@ -71,9 +71,29 @@ header p {
 
 .filters {
   display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.chip-row {
+  display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
 }
 
 .chip {
@@ -81,7 +101,8 @@ header p {
   background: var(--chip-bg);
   color: var(--text);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 8px 14px;
+  min-height: 36px;
   font-size: 0.85rem;
   cursor: pointer;
 }
