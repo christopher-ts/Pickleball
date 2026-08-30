@@ -1,10 +1,28 @@
 const DATA_URL = "sessions.json";
+const DAY_FILTER_STORAGE_KEY = "sm-pickleball-day-filter";
 
 const WEEKDAY_ORDER = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
+function loadStoredDayFilters() {
+  try {
+    const raw = localStorage.getItem(DAY_FILTER_STORAGE_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function saveStoredDayFilters(days) {
+  try {
+    localStorage.setItem(DAY_FILTER_STORAGE_KEY, JSON.stringify([...days]));
+  } catch {
+    // ignore (private browsing, storage disabled, etc.)
+  }
+}
+
 const state = {
   sessions: [],
-  dayFilter: "All",
+  dayFilters: loadStoredDayFilters(),
   locationFilter: "All",
 };
 
@@ -35,26 +53,78 @@ function uniqueValues(sessions, key, sorter = (vals) => vals.sort()) {
   return sorter(Array.from(values));
 }
 
-function renderFilterGroup(container, label, options, activeValue, onSelect) {
-  if (options.length === 0) return;
+function makeChip(label, active, onClick) {
+  const btn = document.createElement("button");
+  btn.className = "chip";
+  btn.textContent = label;
+  btn.setAttribute("aria-pressed", String(active));
+  btn.addEventListener("click", onClick);
+  return btn;
+}
+
+// Multi-select: any number of days can be picked at once (e.g. "I'm free
+// Mon and Thu, show me just those"). Empty selection means show every day.
+function renderDayFilter(container, days) {
+  if (days.length === 0) return;
 
   const group = document.createElement("div");
   group.className = "filter-group";
 
   const heading = document.createElement("div");
   heading.className = "filter-label";
-  heading.textContent = label;
+  heading.textContent = "Day";
   group.appendChild(heading);
 
   const row = document.createElement("div");
   row.className = "chip-row";
-  ["All", ...options].forEach((value) => {
-    const btn = document.createElement("button");
-    btn.className = "chip";
-    btn.textContent = value;
-    btn.setAttribute("aria-pressed", String(activeValue === value));
-    btn.addEventListener("click", () => onSelect(value));
-    row.appendChild(btn);
+
+  row.appendChild(
+    makeChip("All", state.dayFilters.size === 0, () => {
+      state.dayFilters.clear();
+      saveStoredDayFilters(state.dayFilters);
+      render();
+    })
+  );
+
+  days.forEach((day) => {
+    row.appendChild(
+      makeChip(day, state.dayFilters.has(day), () => {
+        if (state.dayFilters.has(day)) {
+          state.dayFilters.delete(day);
+        } else {
+          state.dayFilters.add(day);
+        }
+        saveStoredDayFilters(state.dayFilters);
+        render();
+      })
+    );
+  });
+
+  group.appendChild(row);
+  container.appendChild(group);
+}
+
+// Single-select: only one location makes sense to view at a time.
+function renderLocationFilter(container, locations) {
+  if (locations.length <= 1) return;
+
+  const group = document.createElement("div");
+  group.className = "filter-group";
+
+  const heading = document.createElement("div");
+  heading.className = "filter-label";
+  heading.textContent = "Location";
+  group.appendChild(heading);
+
+  const row = document.createElement("div");
+  row.className = "chip-row";
+  ["All", ...locations].forEach((value) => {
+    row.appendChild(
+      makeChip(value, state.locationFilter === value, () => {
+        state.locationFilter = value;
+        render();
+      })
+    );
   });
   group.appendChild(row);
 
@@ -68,22 +138,13 @@ function renderFilters() {
   const days = uniqueValues(state.sessions, "day", sortByWeekday);
   const locations = uniqueValues(state.sessions, "location");
 
-  renderFilterGroup(container, "Day", days, state.dayFilter, (value) => {
-    state.dayFilter = value;
-    render();
-  });
-
-  if (locations.length > 1) {
-    renderFilterGroup(container, "Location", locations, state.locationFilter, (value) => {
-      state.locationFilter = value;
-      render();
-    });
-  }
+  renderDayFilter(container, days);
+  renderLocationFilter(container, locations);
 }
 
 function filteredSessions() {
   return state.sessions.filter((s) => {
-    const dayOk = state.dayFilter === "All" || s.day === state.dayFilter;
+    const dayOk = state.dayFilters.size === 0 || state.dayFilters.has(s.day);
     const locOk = state.locationFilter === "All" || s.location === state.locationFilter;
     return dayOk && locOk;
   });
