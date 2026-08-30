@@ -140,20 +140,14 @@ header p {
   border-color: var(--accent);
 }
 
-.session-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-}
-
 .session-name {
   font-weight: 600;
   font-size: 0.98rem;
 }
 
 .status-badge {
-  flex-shrink: 0;
+  display: inline-block;
+  margin-top: 8px;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 4px 10px;

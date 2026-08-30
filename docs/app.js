@@ -203,27 +203,22 @@ function renderResults() {
       card.href = session.register_url || "#";
       if (session.register_url) card.target = "_blank";
 
-      const top = document.createElement("div");
-      top.className = "session-top";
-
       const name = document.createElement("div");
       name.className = "session-name";
       name.textContent = session.name || "Pickleball session";
-      top.appendChild(name);
-
-      const info = badgeInfo(session);
-      const badge = document.createElement("span");
-      badge.className = `status-badge ${info.className}`;
-      badge.textContent = info.text;
-      top.appendChild(badge);
-
-      card.appendChild(top);
+      card.appendChild(name);
 
       const meta = document.createElement("div");
       meta.className = "session-meta";
       const metaParts = [session.time, session.location].filter(Boolean);
       meta.textContent = metaParts.join(" · ");
       card.appendChild(meta);
+
+      const info = badgeInfo(session);
+      const badge = document.createElement("span");
+      badge.className = `status-badge ${info.className}`;
+      badge.textContent = info.text;
+      card.appendChild(badge);
 
       group.appendChild(card);
     }
