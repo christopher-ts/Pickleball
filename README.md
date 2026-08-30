@@ -40,20 +40,44 @@ python scraper/notify.py   # needs NTFY_TOPIC in the environment
 
 ## Notes / current status
 
-This was built without the ability to load the real ActiveCommunities site
-from the dev environment, so `scraper/scrape.py` currently parses whatever
-JSON API responses it captures from the rendered page in a generic,
-best-effort way (see `data/debug_capture.json` after a run). If Santa
-Monica's site structure differs from what it guesses, the session list in
-`data/sessions.json` may come back thin or empty — check
-`debug_capture.json` for the raw captured network responses and adjust the
-field-name guesses in `scraper/scrape.py`'s `build_session_entry()`
-accordingly.
+`scraper/scrape.py` loads the search page in a real headless browser (to
+get session cookies right) and reads the site's own internal API response
+directly: `POST .../rest/activities/list` returns structured JSON
+(`body.activity_items`) with name, day/time, location, openings, and
+enroll links — confirmed against real Santa Monica data. That's a private,
+undocumented endpoint though, not a stable public API, so if Santa Monica
+ever changes its shape, `data/debug_capture.json` (written on every run)
+has the raw captured response to re-diagnose from, and `build_session_entry()`
+in `scraper/scrape.py` is where the field-name assumptions live.
 
 If the ActiveCommunities site ends up blocking automated requests from
 GitHub Actions' IP ranges, run the same two scripts from your own machine
 on a cron job (or `launchd` on macOS) instead — nothing about them is
 GitHub-specific other than the workflow file.
+
+## Deferred ideas
+
+**Auto-add-to-cart.** Clicking "Enroll" on a card still lands on Santa
+Monica's own participant-selection page before it reaches the cart — an
+extra step. We looked at closing that gap and tabled it; considered
+approaches, from safest to riskiest:
+
+- **Browser userscript** (Tampermonkey/Greasemonkey) that runs only in your
+  own already-logged-in browser tab and auto-selects the participant when
+  you land on that page. No credentials touch the app or any server. This
+  is the one worth building if we pick this back up.
+- **Smarter deep link** — check whether the enroll URL accepts a parameter
+  that pre-selects a participant and skips the screen entirely. Unproven;
+  needs testing against the real page while logged in.
+- **Fully automated server-side add-to-cart** — the app logs into your SM
+  Rec account itself and adds to cart unattended. Rejected: it turns a
+  read-only scraper into something that takes a real reservation action
+  with no human in the loop, requires storing real login credentials as a
+  GitHub secret (a bigger exposure surface — e.g. our own diagnostic
+  capture step earlier logged full raw network responses to a file
+  committed into the public repo, which is exactly the kind of place a
+  session token could leak from by accident), and risks tripping
+  ActiveNet's bot detection or violating its terms of service.
 
 ## Scope
 
