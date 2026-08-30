@@ -42,12 +42,15 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python scraper/notify.py
 
+      - name: Publish data for the GitHub Pages site
+        run: cp data/sessions.json docs/sessions.json
+
       - name: Commit updated data if changed
         run: |
           rm -f data/sessions.prev.json
           git config user.name "pickleball-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/sessions.json data/debug_capture.json
+          git add data/sessions.json data/debug_capture.json docs/sessions.json
           if ! git diff --cached --quiet; then
             git commit -m "Update scraped session data"
             git push

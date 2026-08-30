@@ -1,4 +1,4 @@
-const DATA_URL = "../data/sessions.json";
+const DATA_URL = "sessions.json";
 
 const state = {
   sessions: [],
