@@ -109,6 +109,8 @@ def build_session_entry(item: dict) -> dict:
         status = status_desc or "Unknown"
 
     location_full = (item.get("location") or {}).get("label")
+    spots_total = item.get("total_open")
+    spots_taken = item.get("already_enrolled")
 
     return {
         "id": str(item.get("id")),
@@ -120,6 +122,8 @@ def build_session_entry(item: dict) -> dict:
         "location_full": location_full,
         "status": status,
         "spots_left": openings_int,
+        "spots_taken": spots_taken,
+        "spots_total": spots_total,
         "activity_number": item.get("number"),
         "register_url": register_url,
         "detail_url": item.get("detail_url"),

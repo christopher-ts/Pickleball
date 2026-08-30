@@ -26,6 +26,17 @@ const state = {
   locationFilter: "All",
 };
 
+function spotsLabel(session) {
+  const { spots_taken, spots_total, spots_left } = session;
+  if (spots_taken != null && spots_total != null) {
+    return `${spots_taken}/${spots_total} spots taken`;
+  }
+  if (spots_left != null) {
+    return `${spots_left} spot${spots_left === 1 ? "" : "s"} left`;
+  }
+  return null;
+}
+
 function statusClass(status) {
   const s = (status || "").toLowerCase();
   if (s.includes("open") || s.includes("available")) return "status-open";
@@ -203,7 +214,7 @@ function renderResults() {
 
       const meta = document.createElement("div");
       meta.className = "session-meta";
-      const metaParts = [session.time, session.location, session.price].filter(Boolean);
+      const metaParts = [session.time, session.location, spotsLabel(session)].filter(Boolean);
       meta.textContent = metaParts.join(" · ");
       card.appendChild(meta);
 
