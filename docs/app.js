@@ -26,23 +26,29 @@ const state = {
   locationFilter: "All",
 };
 
-function spotsLabel(session) {
-  const { spots_taken, spots_total, spots_left } = session;
-  if (spots_taken != null && spots_total != null) {
-    return `${spots_taken}/${spots_total} spots taken`;
+// The badge is the primary signal on each card, so it leads with capacity
+// (how many spots are actually open right now) rather than a flat
+// Open/Full word -- with "Full" reserved for literally zero spots left,
+// never a redundant "104/104".
+function badgeInfo(session) {
+  const status = (session.status || "").toLowerCase();
+  const { spots_left, spots_total } = session;
+
+  if (status.includes("wait")) {
+    return { text: "Waitlist", className: "status-waitlist" };
+  }
+  if (status === "full" || spots_left === 0) {
+    return { text: "Full", className: "status-full" };
   }
   if (spots_left != null) {
-    return `${spots_left} spot${spots_left === 1 ? "" : "s"} left`;
+    const remainingRatio = spots_total ? spots_left / spots_total : null;
+    const label = `${spots_left} spot${spots_left === 1 ? "" : "s"} open`;
+    if (remainingRatio != null && remainingRatio <= 0.15) {
+      return { text: label, className: "status-limited" };
+    }
+    return { text: label, className: "status-open" };
   }
-  return null;
-}
-
-function statusClass(status) {
-  const s = (status || "").toLowerCase();
-  if (s.includes("open") || s.includes("available")) return "status-open";
-  if (s.includes("wait")) return "status-waitlist";
-  if (s.includes("full") || s.includes("closed")) return "status-full";
-  return "status-unknown";
+  return { text: session.status || "Unknown", className: "status-unknown" };
 }
 
 function sortByWeekday(values) {
@@ -205,16 +211,17 @@ function renderResults() {
       name.textContent = session.name || "Pickleball session";
       top.appendChild(name);
 
+      const info = badgeInfo(session);
       const badge = document.createElement("span");
-      badge.className = `status-badge ${statusClass(session.status)}`;
-      badge.textContent = session.status || "Unknown";
+      badge.className = `status-badge ${info.className}`;
+      badge.textContent = info.text;
       top.appendChild(badge);
 
       card.appendChild(top);
 
       const meta = document.createElement("div");
       meta.className = "session-meta";
-      const metaParts = [session.time, session.location, spotsLabel(session)].filter(Boolean);
+      const metaParts = [session.time, session.location].filter(Boolean);
       meta.textContent = metaParts.join(" · ");
       card.appendChild(meta);
 

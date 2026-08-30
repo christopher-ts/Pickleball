@@ -154,9 +154,9 @@ header p {
 
 .status-badge {
   flex-shrink: 0;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 3px 9px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -166,6 +166,7 @@ header p {
   color: var(--accent);
 }
 
+.status-limited,
 .status-waitlist {
   background: var(--waitlist-bg);
   color: var(--waitlist);
