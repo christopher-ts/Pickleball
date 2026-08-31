@@ -1,37 +1,21 @@
 :root {
-  --bg: #f7f7f5;
-  --surface: #ffffff;
-  --border: #e4e2dd;
-  --text: #1c1b1a;
-  --text-muted: #6b6863;
-  --accent: #2f6f4f;
-  --accent-bg: #e8f3ec;
-  --waitlist: #b8860b;
-  --waitlist-bg: #fbf1dc;
-  --full: #a33b3b;
-  --full-bg: #f8e9e9;
-  --chip-bg: #efeee9;
-  --chip-active-bg: #1c1b1a;
-  --chip-active-text: #ffffff;
+  --bg: #d3805a;
+  --ink: #211a10;
+  --paper: #fdf6ee;
+  --hairline: rgba(33, 26, 16, 0.3);
+
+  --moss: #2f7a3d;
+  --ochre: #b8790a;
+  --brick: #c23b2e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #17181a;
-    --surface: #1f2023;
-    --border: #33353a;
-    --text: #f0efec;
-    --text-muted: #a3a19b;
-    --accent: #6fbf94;
-    --accent-bg: #1d3327;
-    --waitlist: #e0b84a;
-    --waitlist-bg: #3a3121;
-    --full: #e08080;
-    --full-bg: #3a2323;
-    --chip-bg: #2a2b2f;
-    --chip-active-bg: #f0efec;
-    --chip-active-text: #17181a;
-  }
+@font-face {
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+  font-display: swap;
+  src: url("fonts/RobotoFlexLatin.woff2") format("woff2");
 }
 
 * {
@@ -41,8 +25,8 @@
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.4;
 }
 
@@ -52,21 +36,28 @@ main {
   padding: 20px 16px 64px;
 }
 
-header h1 {
-  font-size: 1.4rem;
-  margin: 0 0 4px;
-}
-
-header p {
-  margin: 0 0 16px;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.wordmark {
+  font-family: "Roboto Flex", sans-serif;
+  font-variation-settings: "wght" 828, "wdth" 151, "opsz" 57, "GRAD" -1, "slnt" 0, "XTRA" 547, "XOPQ" 150, "YOPQ" 93;
+  font-size: 61px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0 0 20px;
+  color: var(--ink);
 }
 
 .updated-at {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--ink);
+  opacity: 0.68;
   margin-top: 24px;
+}
+
+.updated-at a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .filters {
@@ -85,32 +76,34 @@ header p {
 .filter-label {
   font-size: 0.75rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: var(--ink);
+  opacity: 0.62;
 }
 
 .chip-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
 }
 
 .chip {
-  border: 1px solid var(--border);
-  background: var(--chip-bg);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 8px 14px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  opacity: 0.62;
+  padding: 6px 12px;
   min-height: 36px;
   font-size: 0.85rem;
+  font-family: inherit;
   cursor: pointer;
 }
 
 .chip[aria-pressed="true"] {
-  background: var(--chip-active-bg);
-  color: var(--chip-active-text);
-  border-color: var(--chip-active-bg);
+  background: var(--ink);
+  color: var(--paper);
+  opacity: 1;
+  font-weight: 600;
 }
 
 .day-group {
@@ -119,25 +112,27 @@ header p {
 
 .day-group h2 {
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
-  margin: 0 0 10px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hairline);
 }
 
 .session-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--hairline);
+  padding: 16px 0;
+  margin-bottom: 0;
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
 .session-card:hover {
-  border-color: var(--accent);
+  background: rgba(33, 26, 16, 0.04);
 }
 
 .session-name {
@@ -150,41 +145,41 @@ header p {
   margin-top: 8px;
   font-size: 0.8rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 5px 11px;
   border-radius: 999px;
   white-space: nowrap;
+  background: var(--paper);
 }
 
 .status-open {
-  background: var(--accent-bg);
-  color: var(--accent);
+  color: var(--moss);
 }
 
 .status-limited,
 .status-waitlist {
-  background: var(--waitlist-bg);
-  color: var(--waitlist);
+  color: var(--ochre);
 }
 
 .status-full,
 .status-closed {
-  background: var(--full-bg);
-  color: var(--full);
+  color: var(--brick);
 }
 
 .status-unknown {
-  background: var(--chip-bg);
-  color: var(--text-muted);
+  color: var(--ink);
+  opacity: 0.65;
 }
 
 .session-meta {
   margin-top: 6px;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--ink);
+  opacity: 0.65;
 }
 
 .empty-state {
-  color: var(--text-muted);
+  color: var(--ink);
+  opacity: 0.65;
   font-size: 0.9rem;
   padding: 24px 0;
   text-align: center;
