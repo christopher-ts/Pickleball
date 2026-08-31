@@ -39,6 +39,7 @@ DATE_IN_NAME_PATTERN = re.compile(
     re.IGNORECASE,
 )
 START_TIME_PATTERN = re.compile(r"(\d{1,2}):(\d{2})\s*(AM|PM)", re.IGNORECASE)
+SESSION_NUMBER_PATTERN = re.compile(r"Session\s+(\d+)", re.IGNORECASE)
 
 
 def parse_date_from_name(name: str | None, today: datetime) -> str | None:
@@ -77,6 +78,16 @@ def start_time_minutes(time_range: str | None) -> int:
     if match.group(3).upper() == "PM":
         hour += 12
     return hour * 60 + minute
+
+
+def session_number(name: str | None) -> int:
+    """The N in "...Session N" (e.g. multiple slots on the same day), or 0
+    for names with no such suffix -- there's only one session on those
+    days, so it never competes with a real session number."""
+    if not name:
+        return 0
+    match = SESSION_NUMBER_PATTERN.search(name)
+    return int(match.group(1)) if match else 0
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -231,10 +242,18 @@ def scrape() -> dict:
     ]
     weekday_order = {day: i for i, day in enumerate(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])}
     # Weekday first (matches how the site groups sessions), then the actual
-    # calendar date and time-of-day -- without the date, sessions on
-    # different weeks that share a weekday (e.g. two different Tuesdays)
-    # only tied-break on time and stayed in scrape order, not date order.
-    sessions.sort(key=lambda s: (weekday_order.get(s["day"], 99), s["date"] or "", start_time_minutes(s["time"])))
+    # calendar date, then session number ("...Session 1"/"Session 2" on a
+    # day with multiple slots) -- without the date, sessions on different
+    # weeks that share a weekday (e.g. two different Tuesdays) only
+    # tied-break on time and stayed in scrape order, not date order.
+    # start_time_minutes is a final fallback for the (untested) case of a
+    # multi-slot day with no "Session N" wording in its names.
+    sessions.sort(key=lambda s: (
+        weekday_order.get(s["day"], 99),
+        s["date"] or "",
+        session_number(s["name"]),
+        start_time_minutes(s["time"]),
+    ))
 
     output = {
         "scraped_at": now.isoformat(),
