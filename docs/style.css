@@ -4,9 +4,9 @@
   --paper: #fdf6ee;
   --hairline: rgba(33, 26, 16, 0.3);
 
-  --moss-light: #dbe4c7;
-  --ochre-light: #f2e2ba;
-  --brick-light: #f2d6cd;
+  --moss: #2f7a3d;
+  --ochre: #b8790a;
+  --brick: #c23b2e;
 }
 
 @font-face {
@@ -149,30 +149,30 @@ main {
   top: 16px;
   right: 0;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 5px 11px;
   border-radius: 999px;
   white-space: nowrap;
-  color: var(--ink);
+  background: var(--paper);
 }
 
 .status-open {
-  background: var(--moss-light);
+  color: var(--moss);
 }
 
 .status-limited,
 .status-waitlist {
-  background: var(--ochre-light);
+  color: var(--ochre);
 }
 
 .status-full,
 .status-closed {
-  background: var(--brick-light);
+  color: var(--brick);
 }
 
 .status-unknown {
-  background: var(--paper);
-  opacity: 0.85;
+  color: var(--ink);
+  opacity: 0.65;
 }
 
 .session-meta {
