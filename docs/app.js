@@ -42,7 +42,7 @@ function badgeInfo(session) {
   }
   if (spots_left != null) {
     const remainingRatio = spots_total ? spots_left / spots_total : null;
-    const label = String(spots_left);
+    const label = `${spots_left} open spot${spots_left === 1 ? "" : "s"}`;
     if (remainingRatio != null && remainingRatio <= 0.15) {
       return { text: label, className: "status-limited" };
     }
@@ -86,11 +86,6 @@ function renderDayFilter(container, days) {
 
   const group = document.createElement("div");
   group.className = "filter-group";
-
-  const heading = document.createElement("div");
-  heading.className = "filter-label";
-  heading.textContent = "Day";
-  group.appendChild(heading);
 
   const row = document.createElement("div");
   row.className = "chip-row";

@@ -25,6 +25,59 @@ SEARCH_URL = (
 
 ACTIVITY_LIST_URL_FRAGMENT = "/rest/activities/list"
 
+# Drop-in sessions carry no structured date from the API -- date_range_start/
+# end are only populated for recurring classes/leagues, always empty for
+# open-play items -- so the only date signal is embedded in the free-text
+# name (e.g. "Pickleball Drop-In, Tues., Sept. 1"). Parsed out here so
+# sessions can be sorted chronologically instead of just by weekday name.
+MONTH_ABBR = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+DATE_IN_NAME_PATTERN = re.compile(
+    r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept?|Oct|Nov|Dec)\.?\s+(\d{1,2})\b",
+    re.IGNORECASE,
+)
+START_TIME_PATTERN = re.compile(r"(\d{1,2}):(\d{2})\s*(AM|PM)", re.IGNORECASE)
+
+
+def parse_date_from_name(name: str | None, today: datetime) -> str | None:
+    """Best-effort "Month Day" extraction from a session name. Assumes the
+    current year, rolling to next year if that would place the date more
+    than ~60 days in the past (handles scraping in Nov/Dec for Jan dates)."""
+    if not name:
+        return None
+    match = DATE_IN_NAME_PATTERN.search(name)
+    if not match:
+        return None
+    month = MONTH_ABBR.get(match.group(1).lower())
+    day = int(match.group(2))
+    for year in (today.year, today.year + 1):
+        try:
+            candidate = datetime(year, month, day, tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        if (today - candidate).days <= 60:
+            return candidate.date().isoformat()
+    return None
+
+
+def start_time_minutes(time_range: str | None) -> int:
+    """Minutes since midnight for a time range's start (e.g. "8:00 AM -
+    11:00 AM" -> 480). Sorting the raw string instead ("11:00 AM" <
+    "8:00 AM" lexicographically) put later same-day sessions first, so this
+    exists to sort numerically. Unparseable/missing times sort last."""
+    if not time_range:
+        return 24 * 60
+    match = START_TIME_PATTERN.search(time_range)
+    if not match:
+        return 24 * 60
+    hour = int(match.group(1)) % 12
+    minute = int(match.group(2))
+    if match.group(3).upper() == "PM":
+        hour += 12
+    return hour * 60 + minute
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 SESSIONS_PATH = DATA_DIR / "sessions.json"
@@ -84,7 +137,7 @@ def capture_network(page, activity_list_bodies: list[dict], misc_captured: list[
     page.on("response", on_response)
 
 
-def build_session_entry(item: dict) -> dict:
+def build_session_entry(item: dict, today: datetime) -> dict:
     urgent = item.get("urgent_message") or {}
     status_desc = (urgent.get("status_description") or "").strip()
     action = item.get("action_link") or {}
@@ -116,6 +169,7 @@ def build_session_entry(item: dict) -> dict:
         "id": str(item.get("id")),
         "name": item.get("name"),
         "day": item.get("days_of_week"),
+        "date": parse_date_from_name(item.get("name"), today),
         "time": item.get("time_range"),
         "date_range": item.get("date_range"),
         "location": short_location(location_full),
@@ -161,6 +215,8 @@ def scrape() -> dict:
         )
     )
 
+    now = datetime.now(timezone.utc)
+
     items_by_id: dict[str, dict] = {}
     for resp in activity_list_bodies:
         for item in (resp.get("body") or {}).get("activity_items", []):
@@ -169,15 +225,19 @@ def scrape() -> dict:
                 items_by_id[item_id] = item
 
     sessions = [
-        build_session_entry(item)
+        build_session_entry(item, now)
         for item in items_by_id.values()
         if item.get("name") and OPEN_PLAY_PATTERN.search(item["name"])
     ]
     weekday_order = {day: i for i, day in enumerate(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])}
-    sessions.sort(key=lambda s: (weekday_order.get(s["day"], 99), s["time"] or ""))
+    # Weekday first (matches how the site groups sessions), then the actual
+    # calendar date and time-of-day -- without the date, sessions on
+    # different weeks that share a weekday (e.g. two different Tuesdays)
+    # only tied-break on time and stayed in scrape order, not date order.
+    sessions.sort(key=lambda s: (weekday_order.get(s["day"], 99), s["date"] or "", start_time_minutes(s["time"])))
 
     output = {
-        "scraped_at": datetime.now(timezone.utc).isoformat(),
+        "scraped_at": now.isoformat(),
         "source_url": SEARCH_URL,
         "session_count": len(sessions),
         "sessions": sessions,

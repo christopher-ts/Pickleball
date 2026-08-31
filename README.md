@@ -1,4 +1,4 @@
-# SM Pickleball
+# Rally
 
 A tiny personal app that watches Santa Monica Rec's ActiveCommunities site
 for open-play pickleball sessions, so you don't have to click through the
