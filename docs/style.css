@@ -120,12 +120,11 @@ main {
 }
 
 .session-card {
-  position: relative;
   background: transparent;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid var(--hairline);
-  padding: 16px 90px 16px 0;
+  padding: 16px 0;
   margin-bottom: 0;
   display: block;
   text-decoration: none;
@@ -142,9 +141,8 @@ main {
 }
 
 .status-badge {
-  position: absolute;
-  top: 16px;
-  right: 0;
+  display: inline-block;
+  margin-top: 8px;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 5px 11px;
