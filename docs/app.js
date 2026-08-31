@@ -87,11 +87,6 @@ function renderDayFilter(container, days) {
   const group = document.createElement("div");
   group.className = "filter-group";
 
-  const heading = document.createElement("div");
-  heading.className = "filter-label";
-  heading.textContent = "Day";
-  group.appendChild(heading);
-
   const row = document.createElement("div");
   row.className = "chip-row";
 

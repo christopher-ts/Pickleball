@@ -76,8 +76,6 @@ main {
 .filter-label {
   font-size: 0.75rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
   color: var(--ink);
   opacity: 0.62;
 }
@@ -114,8 +112,7 @@ main {
 
 .day-group h2 {
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-weight: 600;
   color: var(--ink);
   margin: 0 0 10px;
   padding-bottom: 8px;
