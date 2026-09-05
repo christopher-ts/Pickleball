@@ -94,8 +94,21 @@ DATA_DIR = ROOT / "data"
 SESSIONS_PATH = DATA_DIR / "sessions.json"
 DEBUG_PATH = DATA_DIR / "debug_capture.json"
 
-# Only sessions whose name looks like open play / drop-in are kept.
-OPEN_PLAY_PATTERN = re.compile(r"open\s*play|drop[\s-]?in", re.IGNORECASE)
+# Only sessions whose name looks like open play / drop-in are kept -- this
+# is what excludes leagues/clinics (e.g. "PICKLEBALL Intermediate 1",
+# "Sunday Mixed Pickleball League") from the results. Santa Monica Rec
+# renames the regular session on holidays instead of using its usual
+# "Drop-In" wording (e.g. "Pickleball on Labor Day, Sept. 7"), so also
+# allow "on <holiday>" -- still specific enough not to catch a league name.
+HOLIDAY_NAMES = (
+    r"Labor Day|Memorial Day|Independence Day|Presidents?\s*Day|"
+    r"Veterans?\s*Day|Columbus Day|Thanksgiving|New Year'?s(?:\s*Day)?|"
+    r"MLK Day|Martin Luther King,?\s*Jr\.?\s*Day"
+)
+OPEN_PLAY_PATTERN = re.compile(
+    rf"open\s*play|drop[\s-]?in|\bon (?:{HOLIDAY_NAMES})\b",
+    re.IGNORECASE,
+)
 
 # The API returns full street addresses (e.g. "1401 Olympic Blvd. Memorial
 # Park Tennis/Pickleball Courts"). Shorten to just the facility name for

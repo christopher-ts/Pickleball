@@ -1,8 +1,25 @@
 {
   "scraped_at": "2026-09-05T00:51:22.858854+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
-  "session_count": 7,
+  "session_count": 8,
   "sessions": [
+    {
+      "id": "109845",
+      "name": "Pickleball on Labor Day, Sept. 7",
+      "day": "Mon",
+      "date": "2026-09-07",
+      "time": "5:00 PM - 9:30 PM",
+      "date_range": "September 7, 2026",
+      "location": "Memorial Park",
+      "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
+      "status": "Open",
+      "spots_left": 15,
+      "spots_taken": 1,
+      "spots_total": 16,
+      "activity_number": "7909.036",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/109845?wishlist_id=0&locale=en-US",
+      "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-on-labor-day-sept-7/109845?locale=en-US"
+    },
     {
       "id": "107871",
       "name": "Pickleball Drop-In, Tues., Sept. 8",
