@@ -16,7 +16,14 @@ jobs:
   poll:
     runs-on: ubuntu-latest
     steps:
+      # Pinned explicitly: this must always run against main (where GitHub
+      # Pages deploys from) regardless of whatever the repo's default
+      # branch happens to be set to -- a schedule/workflow_dispatch run
+      # otherwise checks out the default branch, which drifted out of sync
+      # with main before and silently left the live site on stale data.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
