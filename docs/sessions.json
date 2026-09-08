@@ -1,7 +1,7 @@
 {
-  "scraped_at": "2026-09-08T19:43:31.260547+00:00",
+  "scraped_at": "2026-09-08T22:20:39.402524+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
-  "session_count": 8,
+  "session_count": 11,
   "sessions": [
     {
       "id": "107843",
@@ -13,8 +13,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 93,
-      "spots_taken": 11,
+      "spots_left": 92,
+      "spots_taken": 12,
       "spots_total": 104,
       "activity_number": "7909.016",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107843?locale=en-US",
@@ -38,6 +38,23 @@
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-tues-sept-8/107871?locale=en-US"
     },
     {
+      "id": "107867",
+      "name": "Pickleball Drop-In, Tues., Sept. 15",
+      "day": "Tue",
+      "date": "2026-09-15",
+      "time": "5:00 PM - 9:30 PM",
+      "date_range": "Sept. 15, 5pm",
+      "location": "Memorial Park",
+      "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
+      "status": "Open",
+      "spots_left": 90,
+      "spots_taken": 0,
+      "spots_total": 90,
+      "activity_number": "7909.017",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107867?locale=en-US",
+      "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-tues-sept-15/107867?locale=en-US"
+    },
+    {
       "id": "107873",
       "name": "Pickleball Drop-In, Weds., Sept. 9",
       "day": "Wed",
@@ -55,6 +72,23 @@
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-weds-sept-9/107873?locale=en-US"
     },
     {
+      "id": "107872",
+      "name": "Pickleball Drop-In, Weds, Sept. 16",
+      "day": "Wed",
+      "date": "2026-09-16",
+      "time": "5:00 PM - 9:30 PM",
+      "date_range": "Sept. 16, 5pm",
+      "location": "Memorial Park",
+      "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
+      "status": "Open",
+      "spots_left": 104,
+      "spots_taken": 0,
+      "spots_total": 104,
+      "activity_number": "7909.018",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107872?wishlist_id=0&locale=en-US",
+      "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-weds-sept-16/107872?locale=en-US"
+    },
+    {
       "id": "107864",
       "name": "Pickleball Drop-In, Thurs., Sept. 10",
       "day": "Thu",
@@ -70,6 +104,23 @@
       "activity_number": "7909.011",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107864?wishlist_id=0&locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-thurs-sept-10/107864?locale=en-US"
+    },
+    {
+      "id": "107865",
+      "name": "Pickleball Drop-In, Thurs., Sept. 17",
+      "day": "Thu",
+      "date": "2026-09-17",
+      "time": "5:00 PM - 9:30 PM",
+      "date_range": "Sept. 17, 5pm",
+      "location": "Memorial Park",
+      "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
+      "status": "Open",
+      "spots_left": 90,
+      "spots_taken": 0,
+      "spots_total": 90,
+      "activity_number": "7909.019",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107865?wishlist_id=0&locale=en-US",
+      "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-thurs-sept-17/107865?locale=en-US"
     },
     {
       "id": "107847",
@@ -98,8 +149,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 76,
-      "spots_taken": 14,
+      "spots_left": 74,
+      "spots_taken": 16,
       "spots_total": 90,
       "activity_number": "7909.013",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107848?locale=en-US",
