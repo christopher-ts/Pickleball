@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-10T10:01:15.582340+00:00",
+  "scraped_at": "2026-09-10T14:29:58.518180+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
   "session_count": 9,
   "sessions": [
@@ -13,8 +13,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 67,
-      "spots_taken": 37,
+      "spots_left": 66,
+      "spots_taken": 38,
       "spots_total": 104,
       "activity_number": "7909.016",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107843?locale=en-US",
@@ -85,7 +85,7 @@
       "spots_taken": 0,
       "spots_total": 90,
       "activity_number": "7909.019",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107865?wishlist_id=0&locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107865?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-thurs-sept-17/107865?locale=en-US"
     },
     {
@@ -98,8 +98,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 45,
-      "spots_taken": 59,
+      "spots_left": 44,
+      "spots_taken": 60,
       "spots_total": 104,
       "activity_number": "7909.012",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107847?locale=en-US",
@@ -132,8 +132,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 65,
-      "spots_taken": 39,
+      "spots_left": 64,
+      "spots_taken": 40,
       "spots_total": 104,
       "activity_number": "7909.014",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/107855?locale=en-US",
