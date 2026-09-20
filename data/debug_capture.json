@@ -10,9 +10,9 @@
         "page_info": {
           "order_by": "Name",
           "order_option": "ASC",
-          "total_page": 2,
+          "total_page": 1,
           "total_records_per_page": 20,
-          "total_records": 21,
+          "total_records": 18,
           "page_number": 1
         }
       },
@@ -71,9 +71,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "From Sep 3, 2026 to Oct 22, 2026<br/>Each Thursday from 5pm to 6pm",
-            "number": "2201.362",
-            "time_range": "5:00 PM - 6:00 PM",
+            "name": "1P Intro To Pickleball Thursday 5 PM",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/1p-intro-to-pickleball-thursday-5-pm/109593",
               "title": "",
@@ -83,6 +81,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "18 - 99",
+            "date_range_start": "2026-09-03",
+            "date_range_end": "2026-10-22",
+            "date_range_description": "",
+            "date_range": "September 3, 2026 to October 22, 2026",
+            "number": "2201.362",
+            "openings": "2",
+            "time_range": "5:00 PM - 6:00 PM",
+            "days_of_week": "Thu",
+            "detail_date": "From Sep 3, 2026 to Oct 22, 2026<br/>Each Thursday from 5pm to 6pm",
             "location": {
               "href": "",
               "title": "",
@@ -92,15 +100,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "1P Intro To Pickleball Thursday 5 PM",
-            "days_of_week": "Thu",
-            "date_range_start": "2026-09-03",
-            "date_range_end": "2026-10-22",
-            "date_range_description": "",
-            "date_range": "September 3, 2026 to October 22, 2026",
-            "time_range_landing_page": "5:00 PM - 6:00 PM",
-            "openings": "2",
-            "ages": "18 - 99"
+            "time_range_landing_page": "5:00 PM - 6:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -155,9 +155,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "From Sep 1, 2026 to Oct 20, 2026<br/>Each Tuesday from 7pm to 8pm",
-            "number": "2201.363",
-            "time_range": "7:00 PM - 8:00 PM",
+            "name": "1P Intro To Pickleball Tuesday 7 PM",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/1p-intro-to-pickleball-tuesday-7-pm/109592",
               "title": "",
@@ -167,6 +165,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "18 - 99",
+            "date_range_start": "2026-09-01",
+            "date_range_end": "2026-10-20",
+            "date_range_description": "",
+            "date_range": "September 1, 2026 to October 20, 2026",
+            "number": "2201.363",
+            "openings": "1",
+            "time_range": "7:00 PM - 8:00 PM",
+            "days_of_week": "Tue",
+            "detail_date": "From Sep 1, 2026 to Oct 20, 2026<br/>Each Tuesday from 7pm to 8pm",
             "location": {
               "href": "",
               "title": "",
@@ -176,15 +184,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "1P Intro To Pickleball Tuesday 7 PM",
-            "days_of_week": "Tue",
-            "date_range_start": "2026-09-01",
-            "date_range_end": "2026-10-20",
-            "date_range_description": "",
-            "date_range": "September 1, 2026 to October 20, 2026",
-            "time_range_landing_page": "7:00 PM - 8:00 PM",
-            "openings": "1",
-            "ages": "18 - 99"
+            "time_range_landing_page": "7:00 PM - 8:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -239,9 +239,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "From Sep 3, 2026 to Oct 22, 2026<br/>Each Thursday from 6pm to 7pm",
-            "number": "2202.364",
-            "time_range": "6:00 PM - 7:00 PM",
+            "name": "1P PICKLEBALL BEGINNER 2 \u2013 Skills & Drills  Thur 6pm",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/1p-pickleball-beginner-2-skills-drills-thur-6pm/109594",
               "title": "",
@@ -251,6 +249,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "18 - 99",
+            "date_range_start": "2026-09-03",
+            "date_range_end": "2026-10-22",
+            "date_range_description": "",
+            "date_range": "September 3, 2026 to October 22, 2026",
+            "number": "2202.364",
+            "openings": "0",
+            "time_range": "6:00 PM - 7:00 PM",
+            "days_of_week": "Thu",
+            "detail_date": "From Sep 3, 2026 to Oct 22, 2026<br/>Each Thursday from 6pm to 7pm",
             "location": {
               "href": "",
               "title": "",
@@ -260,15 +268,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "1P PICKLEBALL BEGINNER 2 \u2013 Skills & Drills  Thur 6pm",
-            "days_of_week": "Thu",
-            "date_range_start": "2026-09-03",
-            "date_range_end": "2026-10-22",
-            "date_range_description": "",
-            "date_range": "September 3, 2026 to October 22, 2026",
-            "time_range_landing_page": "6:00 PM - 7:00 PM",
-            "openings": "0",
-            "ages": "18 - 99"
+            "time_range_landing_page": "6:00 PM - 7:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -323,9 +323,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "From Sep 1, 2026 to Oct 20, 2026<br/>Each Tuesday from 5pm to 6pm",
-            "number": "2201.364",
-            "time_range": "5:00 PM - 6:00 PM",
+            "name": "1P PICKLEBALL BEGINNER 2 \u2013 Skills & Drills Tues 5pm",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/1p-pickleball-beginner-2-skills-drills-tues-5pm/109590",
               "title": "",
@@ -335,6 +333,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "18 - 99",
+            "date_range_start": "2026-09-01",
+            "date_range_end": "2026-10-20",
+            "date_range_description": "",
+            "date_range": "September 1, 2026 to October 20, 2026",
+            "number": "2201.364",
+            "openings": "0",
+            "time_range": "5:00 PM - 6:00 PM",
+            "days_of_week": "Tue",
+            "detail_date": "From Sep 1, 2026 to Oct 20, 2026<br/>Each Tuesday from 5pm to 6pm",
             "location": {
               "href": "",
               "title": "",
@@ -344,15 +352,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "1P PICKLEBALL BEGINNER 2 \u2013 Skills & Drills Tues 5pm",
-            "days_of_week": "Tue",
-            "date_range_start": "2026-09-01",
-            "date_range_end": "2026-10-20",
-            "date_range_description": "",
-            "date_range": "September 1, 2026 to October 20, 2026",
-            "time_range_landing_page": "5:00 PM - 6:00 PM",
-            "openings": "0",
-            "ages": "18 - 99"
+            "time_range_landing_page": "5:00 PM - 6:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -380,7 +380,7 @@
             },
             "urgent_message": {
               "group_id": 1,
-              "status_description": "18 space(s) left",
+              "status_description": "13 space(s) left",
               "no_urgency_status_description": null
             },
             "num_of_sub_activities": 0,
@@ -390,7 +390,7 @@
             "search_from_price": null,
             "search_from_price_desc": "",
             "allow_drop_in_reg": false,
-            "already_enrolled": 85,
+            "already_enrolled": 89,
             "total_open": 104,
             "show_wish_list": true,
             "wish_list_id": 0,
@@ -407,9 +407,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 21, 5pm",
-            "number": "7909.024",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Mon., Sept. 21",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-mon-sept-21/107844",
               "title": "",
@@ -419,6 +417,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 21, 5pm",
+            "date_range": "Sept. 21, 5pm",
+            "number": "7909.024",
+            "openings": "13",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Mon",
+            "detail_date": "Sept. 21, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -428,15 +436,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Mon., Sept. 21",
-            "days_of_week": "Mon",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 21, 5pm",
-            "date_range": "Sept. 21, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "18",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "2026-09-21 06:00:00",
@@ -491,9 +491,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 28, 5pm",
-            "number": "7909.032",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Mon., Sept. 28",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-mon-sept-28/107845",
               "title": "",
@@ -503,6 +501,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 28, 5pm",
+            "date_range": "Sept. 28, 5pm",
+            "number": "7909.032",
+            "openings": "104",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Mon",
+            "detail_date": "Sept. 28, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -512,15 +520,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Mon., Sept. 28",
-            "days_of_week": "Mon",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 28, 5pm",
-            "date_range": "Sept. 28, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "104",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "",
@@ -558,7 +558,7 @@
             "search_from_price": null,
             "search_from_price_desc": "",
             "allow_drop_in_reg": false,
-            "already_enrolled": 6,
+            "already_enrolled": 7,
             "total_open": 104,
             "show_wish_list": true,
             "wish_list_id": 0,
@@ -575,9 +575,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 26, 8-11am",
-            "number": "7909.028",
-            "time_range": "8:00 AM - 11:00 AM",
+            "name": "Pickleball Drop-In, Sat., Sept. 26, Session 1",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sat-sept-26-session-1/107851",
               "title": "",
@@ -587,6 +585,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 26, 8-11am",
+            "date_range": "Sept. 26, 8-11am",
+            "number": "7909.028",
+            "openings": "97",
+            "time_range": "8:00 AM - 11:00 AM",
+            "days_of_week": "Sat",
+            "detail_date": "Sept. 26, 8-11am",
             "location": {
               "href": "",
               "title": "",
@@ -596,15 +604,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Sat., Sept. 26, Session 1",
-            "days_of_week": "Sat",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 26, 8-11am",
-            "date_range": "Sept. 26, 8-11am",
-            "time_range_landing_page": "8:00 AM - 11:00 AM",
-            "openings": "98",
-            "ages": "12 - 99"
+            "time_range_landing_page": "8:00 AM - 11:00 AM"
           },
           {
             "activity_online_start_time": "",
@@ -642,7 +642,7 @@
             "search_from_price": null,
             "search_from_price_desc": "",
             "allow_drop_in_reg": false,
-            "already_enrolled": 4,
+            "already_enrolled": 6,
             "total_open": 90,
             "show_wish_list": true,
             "wish_list_id": 0,
@@ -659,9 +659,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 26, 11am-2pm",
-            "number": "7909.029",
-            "time_range": "11:00 AM - 2:00 PM",
+            "name": "Pickleball Drop-In, Sat., Sept. 26, Session 2",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sat-sept-26-session-2/107852",
               "title": "",
@@ -671,6 +669,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 26, 11am-2pm",
+            "date_range": "Sept. 26, 11am-2pm",
+            "number": "7909.029",
+            "openings": "84",
+            "time_range": "11:00 AM - 2:00 PM",
+            "days_of_week": "Sat",
+            "detail_date": "Sept. 26, 11am-2pm",
             "location": {
               "href": "",
               "title": "",
@@ -680,15 +688,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Sat., Sept. 26, Session 2",
-            "days_of_week": "Sat",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 26, 11am-2pm",
-            "date_range": "Sept. 26, 11am-2pm",
-            "time_range_landing_page": "11:00 AM - 2:00 PM",
-            "openings": "86",
-            "ages": "12 - 99"
+            "time_range_landing_page": "11:00 AM - 2:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -743,9 +743,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 27, 8-11am",
-            "number": "7909.030",
-            "time_range": "8:00 AM - 11:00 AM",
+            "name": "Pickleball Drop-In, Sun., Sept. 27, Session 1",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-sept-27-session-1/107859",
               "title": "",
@@ -755,6 +753,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 27, 8-11am",
+            "date_range": "Sept. 27, 8-11am",
+            "number": "7909.030",
+            "openings": "104",
+            "time_range": "8:00 AM - 11:00 AM",
+            "days_of_week": "Sun",
+            "detail_date": "Sept. 27, 8-11am",
             "location": {
               "href": "",
               "title": "",
@@ -764,15 +772,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Sun., Sept. 27, Session 1",
-            "days_of_week": "Sun",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 27, 8-11am",
-            "date_range": "Sept. 27, 8-11am",
-            "time_range_landing_page": "8:00 AM - 11:00 AM",
-            "openings": "104",
-            "ages": "12 - 99"
+            "time_range_landing_page": "8:00 AM - 11:00 AM"
           },
           {
             "activity_online_start_time": "",
@@ -827,9 +827,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 27, 11am-2pm",
-            "number": "7909.031",
-            "time_range": "2:00 PM - 5:00 PM",
+            "name": "Pickleball Drop-In, Sun., Sept. 27, Session 2",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-sept-27-session-2/107860",
               "title": "",
@@ -839,6 +837,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 27, 11am-2pm",
+            "date_range": "Sept. 27, 11am-2pm",
+            "number": "7909.031",
+            "openings": "89",
+            "time_range": "2:00 PM - 5:00 PM",
+            "days_of_week": "Sun",
+            "detail_date": "Sept. 27, 11am-2pm",
             "location": {
               "href": "",
               "title": "",
@@ -848,15 +856,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Sun., Sept. 27, Session 2",
-            "days_of_week": "Sun",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 27, 11am-2pm",
-            "date_range": "Sept. 27, 11am-2pm",
-            "time_range_landing_page": "2:00 PM - 5:00 PM",
-            "openings": "89",
-            "ages": "12 - 99"
+            "time_range_landing_page": "2:00 PM - 5:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -894,7 +894,7 @@
             "search_from_price": null,
             "search_from_price_desc": "",
             "allow_drop_in_reg": false,
-            "already_enrolled": 35,
+            "already_enrolled": 40,
             "total_open": 90,
             "show_wish_list": true,
             "wish_list_id": 0,
@@ -911,9 +911,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 24, 5pm",
-            "number": "7909.027",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Thurs. Sept. 24",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-thurs-sept-24/107863",
               "title": "",
@@ -923,6 +921,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 24, 5pm",
+            "date_range": "Sept. 24, 5pm",
+            "number": "7909.027",
+            "openings": "50",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Thu",
+            "detail_date": "Sept. 24, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -932,15 +940,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Thurs. Sept. 24",
-            "days_of_week": "Thu",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 24, 5pm",
-            "date_range": "Sept. 24, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "55",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "2026-09-24 06:00:00",
@@ -995,9 +995,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "October 1, 5pm",
-            "number": "7910.001",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Thurs., Oct. 1",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-thurs-oct-1/108229",
               "title": "",
@@ -1007,6 +1005,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "October 1, 5pm",
+            "date_range": "October 1, 5pm",
+            "number": "7910.001",
+            "openings": "90",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Thu",
+            "detail_date": "October 1, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -1016,15 +1024,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Thurs., Oct. 1",
-            "days_of_week": "Thu",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "October 1, 5pm",
-            "date_range": "October 1, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "90",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "",
@@ -1079,9 +1079,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 22, 5pm",
-            "number": "7909.025",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Tues., Sept. 22",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-tues-sept-22/107869",
               "title": "",
@@ -1091,6 +1089,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 22, 5pm",
+            "date_range": "Sept. 22, 5pm",
+            "number": "7909.025",
+            "openings": "0",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Tue",
+            "detail_date": "Sept. 22, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -1100,15 +1108,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Tues., Sept. 22",
-            "days_of_week": "Tue",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 22, 5pm",
-            "date_range": "Sept. 22, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "0",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "2026-09-22 06:00:00",
@@ -1163,9 +1163,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 29, 5pm",
-            "number": "7909.033",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Tues., Sept. 29",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-tues-sept-29/107870",
               "title": "",
@@ -1175,6 +1173,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 29, 5pm",
+            "date_range": "Sept. 29, 5pm",
+            "number": "7909.033",
+            "openings": "90",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Tue",
+            "detail_date": "Sept. 29, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -1184,15 +1192,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Tues., Sept. 29",
-            "days_of_week": "Tue",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 29, 5pm",
-            "date_range": "Sept. 29, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "90",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "2026-09-23 06:00:00",
@@ -1247,9 +1247,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 30, 5pm",
-            "number": "7909.034",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Weds, Sept. 30",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-weds-sept-30/107880",
               "title": "",
@@ -1259,6 +1257,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 30, 5pm",
+            "date_range": "Sept. 30, 5pm",
+            "number": "7909.034",
+            "openings": "104",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Wed",
+            "detail_date": "Sept. 30, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -1268,15 +1276,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Weds, Sept. 30",
-            "days_of_week": "Wed",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 30, 5pm",
-            "date_range": "Sept. 30, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "104",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "",
@@ -1304,7 +1304,7 @@
             },
             "urgent_message": {
               "group_id": 1,
-              "status_description": "Starting soon",
+              "status_description": "19 space(s) left",
               "no_urgency_status_description": null
             },
             "num_of_sub_activities": 0,
@@ -1314,7 +1314,7 @@
             "search_from_price": null,
             "search_from_price_desc": "",
             "allow_drop_in_reg": false,
-            "already_enrolled": 82,
+            "already_enrolled": 85,
             "total_open": 104,
             "show_wish_list": true,
             "wish_list_id": 0,
@@ -1331,9 +1331,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "Sept. 23, 5pm",
-            "number": "7909.026",
-            "time_range": "5:00 PM - 9:30 PM",
+            "name": "Pickleball Drop-In, Weds., Sept. 23",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-weds-sept-23/107874",
               "title": "",
@@ -1343,6 +1341,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "12 - 99",
+            "date_range_start": "",
+            "date_range_end": "",
+            "date_range_description": "Sept. 23, 5pm",
+            "date_range": "Sept. 23, 5pm",
+            "number": "7909.026",
+            "openings": "19",
+            "time_range": "5:00 PM - 9:30 PM",
+            "days_of_week": "Wed",
+            "detail_date": "Sept. 23, 5pm",
             "location": {
               "href": "",
               "title": "",
@@ -1352,15 +1360,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Pickleball Drop-In, Weds., Sept. 23",
-            "days_of_week": "Wed",
-            "date_range_start": "",
-            "date_range_end": "",
-            "date_range_description": "Sept. 23, 5pm",
-            "date_range": "Sept. 23, 5pm",
-            "time_range_landing_page": "5:00 PM - 9:30 PM",
-            "openings": "22",
-            "ages": "12 - 99"
+            "time_range_landing_page": "5:00 PM - 9:30 PM"
           },
           {
             "activity_online_start_time": "",
@@ -1415,9 +1415,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "From Sep 3, 2026 to Oct 22, 2026<br/>Each Thursday from 7pm to 8pm",
-            "number": "2202.365",
-            "time_range": "7:00 PM - 8:00 PM",
+            "name": "PICKLEBALL Intermediate 1  Thur 7pm",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-intermediate-1-thur-7pm/109595",
               "title": "",
@@ -1427,6 +1425,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
+            "ages": "18 - 99",
+            "date_range_start": "2026-09-03",
+            "date_range_end": "2026-10-22",
+            "date_range_description": "",
+            "date_range": "September 3, 2026 to October 22, 2026",
+            "number": "2202.365",
+            "openings": "0",
+            "time_range": "7:00 PM - 8:00 PM",
+            "days_of_week": "Thu",
+            "detail_date": "From Sep 3, 2026 to Oct 22, 2026<br/>Each Thursday from 7pm to 8pm",
             "location": {
               "href": "",
               "title": "",
@@ -1436,15 +1444,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "PICKLEBALL Intermediate 1  Thur 7pm",
-            "days_of_week": "Thu",
-            "date_range_start": "2026-09-03",
-            "date_range_end": "2026-10-22",
-            "date_range_description": "",
-            "date_range": "September 3, 2026 to October 22, 2026",
-            "time_range_landing_page": "7:00 PM - 8:00 PM",
-            "openings": "0",
-            "ages": "18 - 99"
+            "time_range_landing_page": "7:00 PM - 8:00 PM"
           },
           {
             "activity_online_start_time": "",
@@ -1499,9 +1499,7 @@
             "wish_list_participants": null,
             "enrolled_participants": null,
             "allow_flexible_class": false,
-            "detail_date": "From Sep 1, 2026 to Oct 20, 2026<br/>Each Tuesday from 6pm to 7pm",
-            "number": "2201.365",
-            "time_range": "6:00 PM - 7:00 PM",
+            "name": "PICKLEBALL Intermediate 1 Tues 6pm",
             "fee": {
               "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-intermediate-1-tues-6pm/109591",
               "title": "",
@@ -1511,90 +1509,16 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": true
             },
-            "location": {
-              "href": "",
-              "title": "",
-              "label": "Memorial Park Tennis Courts - 1401 Olympic Blvd.",
-              "type": 0,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": false
-            },
-            "name": "PICKLEBALL Intermediate 1 Tues 6pm",
-            "days_of_week": "Tue",
+            "ages": "18 - 99",
             "date_range_start": "2026-09-01",
             "date_range_end": "2026-10-20",
             "date_range_description": "",
             "date_range": "September 1, 2026 to October 20, 2026",
-            "time_range_landing_page": "6:00 PM - 7:00 PM",
+            "number": "2201.365",
             "openings": "0",
-            "ages": "18 - 99"
-          },
-          {
-            "activity_online_start_time": "",
-            "id": 109137,
-            "desc": "<div><b><u><font color=\"#ff0000\">Game Times will vary from 3:30pm-7:00pm Start Time </font></u></b></div><div><br></div><div>Mixed Pickleball League 3.0 to 3.49</div><div><div>Each Team must have minimum of 2 males and 2 females, (Unlimited alternates allowed. List of alternates should be provided at beginning of season).</div><div><br></div><div>Format: Each Squad will play one men's match, one women's match, and two mixed doubles match. Each game Match will be best of 3 to 11.</div><div><br></div><div>If after the 4 matches, games are tied 2 all, then a Singles Dream Breaker to 15 will decide the outcome.</div><div><br></div><div>Players will call their own lines and USA Pickleball Rules 2025, apply. Supervisors will provide further details on All Rules, and reserves the right to change or modify the format if he feels necessary.</div><div><br></div><div>Season will run for 8 weeks, and playoffs and a championship match will be played the last week with winners receiving Medals.</div><div><br></div><div><br></div><div>FEES: 400.00 per team. Captains will be responsible for picking its own players. (we have a free agent list if needed)</div></div><div><br></div><div><br></div><br><div><br></div><div><br></div><div><br></div><div>REFUNDS/TRANSFERS - A $15.00 processing fee applies for each activity session refunded. Refunds will be prorated. Refund/transfer requests must be emailed to the Community Classes & Camps office community.classes@santamonica.gov Refunds will be issued only if requested within one day after the first class meeting. </div><div><br></div><div>Material fees are not discountable and are nonrefundable</div><div><br></div><div>REFUNDS FOR DUPLICATE/MULTIPLE ENROLLMENTS resulting from multiple registration submissions (at one or more offices or via online registration) will be subject to a $15.00 processing fee for each activity session refunded. </div><div><br></div><div>CANCELLED CLASSES: Makeups will not be offered for classes missed by the student. Programs are subject to cancellation if minimum enrollment is not met. All class dates, times, locations, and instructors are subject to change without notice.    </div>",
-            "item_type": 1,
-            "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/sunday-mixed-pickleball-3-0-to-3-5-league/109137?locale=en-US",
-            "action_link": {
-              "href": "",
-              "title": "",
-              "label": "",
-              "type": 0,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": false
-            },
-            "enroll_now": {
-              "href": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/109137?wishlist_id=0&locale=en-US",
-              "title": "",
-              "label": "Enroll Now",
-              "type": 3,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": false
-            },
-            "urgent_message": {
-              "group_id": 1,
-              "status_description": "In progress",
-              "no_urgency_status_description": null
-            },
-            "num_of_sub_activities": 0,
-            "sub_activity_ids": null,
-            "show_new_flag": false,
-            "only_one_day": false,
-            "search_from_price": null,
-            "search_from_price_desc": "",
-            "allow_drop_in_reg": false,
-            "already_enrolled": 0,
-            "total_open": 6,
-            "show_wish_list": true,
-            "wish_list_id": 0,
-            "parent_activity": false,
-            "age_max_year": 99,
-            "age_max_month": 0,
-            "age_max_week": 0,
-            "age_min_year": 18,
-            "age_min_month": 0,
-            "age_min_week": 0,
-            "age_description": "Age at least 18 yrs but less than 99 yrs,",
-            "max_grade": null,
-            "min_grade": null,
-            "wish_list_participants": null,
-            "enrolled_participants": null,
-            "allow_flexible_class": false,
-            "detail_date": "From Aug 2, 2026 to Sep 20, 2026<br/>Each Sunday from 3:30pm to 7:30pm",
-            "number": "2202.203",
-            "time_range": "3:30 PM - 7:30 PM",
-            "fee": {
-              "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/sunday-mixed-pickleball-3-0-to-3-5-league/109137",
-              "title": "",
-              "label": "View fee details",
-              "type": 2,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": true
-            },
+            "time_range": "6:00 PM - 7:00 PM",
+            "days_of_week": "Tue",
+            "detail_date": "From Sep 1, 2026 to Oct 20, 2026<br/>Each Tuesday from 6pm to 7pm",
             "location": {
               "href": "",
               "title": "",
@@ -1604,99 +1528,7 @@
               "show_all_inclusive_pricing": false,
               "enable_all_inclusive_pricing": false
             },
-            "name": "Sunday Mixed Pickleball 3.0 to 3.5 League",
-            "days_of_week": "Sun",
-            "date_range_start": "2026-08-02",
-            "date_range_end": "2026-09-20",
-            "date_range_description": "",
-            "date_range": "August 2, 2026 to September 20, 2026",
-            "time_range_landing_page": "3:30 PM - 7:30 PM",
-            "openings": "6",
-            "ages": "18 - 99"
-          },
-          {
-            "activity_online_start_time": "",
-            "id": 109138,
-            "desc": "<div><b><u><font color=\"#ff0000\">Game Times will vary from 3:30pm-7:00pm Start Time </font></u></b></div><div><br></div><div>Mixed Pickleball League 3.5 to 4.0</div><div><div>Each Team must have minimum of 2 males and 2 females, (Unlimited alternates allowed. List of alternates should be provided at beginning of season).</div><div><br></div><div>Format: Each Squad will play one men's match, one women's match, and two mixed doubles match. Each game Match will be best of 3 to 11.</div><div><br></div><div>If after the 4 matches, games are tied 2 all, then a Singles Dream Breaker to 15 will decide the outcome.</div><div><br></div><div>Players will call their own lines and USA Pickleball Rules 2025, apply. Supervisors will provide further details on All Rules, and reserves the right to change or modify the format if he feels necessary.</div><div><br></div><div>Season will run for 8 weeks, and playoffs and a championship match will be played the last week with winners receiving Medals.</div><div><br></div><div><br></div><div>FEES: 400.00 per team. Captains will be responsible for picking its own players. (we have a free agent list if needed)</div></div><div><br></div><div><br></div><br><div><br></div><div><br></div><div><br></div><div>REFUNDS/TRANSFERS - A $15.00 processing fee applies for each activity session refunded. Refunds will be prorated. Refund/transfer requests must be emailed to the Community Classes & Camps office community.classes@santamonica.gov Refunds will be issued only if requested within one day after the first class meeting. </div><div><br></div><div>Material fees are not discountable and are nonrefundable</div><div><br></div><div>REFUNDS FOR DUPLICATE/MULTIPLE ENROLLMENTS resulting from multiple registration submissions (at one or more offices or via online registration) will be subject to a $15.00 processing fee for each activity session refunded. </div><div><br></div><div>CANCELLED CLASSES: Makeups will not be offered for classes missed by the student. Programs are subject to cancellation if minimum enrollment is not met. All class dates, times, locations, and instructors are subject to change without notice.    </div>",
-            "item_type": 1,
-            "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/sunday-mixed-pickleball-3-5-to-4-0-league/109138?locale=en-US",
-            "action_link": {
-              "href": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/109138?locale=en-US",
-              "title": "",
-              "label": "Enroll Now",
-              "type": 3,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": false
-            },
-            "enroll_now": {
-              "href": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/109138?wishlist_id=0&locale=en-US",
-              "title": "",
-              "label": "Enroll Now",
-              "type": 3,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": false
-            },
-            "urgent_message": {
-              "group_id": 1,
-              "status_description": "In progress",
-              "no_urgency_status_description": null
-            },
-            "num_of_sub_activities": 0,
-            "sub_activity_ids": null,
-            "show_new_flag": false,
-            "only_one_day": false,
-            "search_from_price": null,
-            "search_from_price_desc": "",
-            "allow_drop_in_reg": false,
-            "already_enrolled": 1,
-            "total_open": 6,
-            "show_wish_list": true,
-            "wish_list_id": 0,
-            "parent_activity": false,
-            "age_max_year": 99,
-            "age_max_month": 0,
-            "age_max_week": 0,
-            "age_min_year": 18,
-            "age_min_month": 0,
-            "age_min_week": 0,
-            "age_description": "Age at least 18 yrs but less than 99 yrs,",
-            "max_grade": null,
-            "min_grade": null,
-            "wish_list_participants": null,
-            "enrolled_participants": null,
-            "allow_flexible_class": false,
-            "detail_date": "From Aug 2, 2026 to Sep 20, 2026<br/>Each Sunday from 3:30pm to 7:30pm",
-            "number": "2202.204",
-            "time_range": "3:30 PM - 7:30 PM",
-            "fee": {
-              "href": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/sunday-mixed-pickleball-3-5-to-4-0-league/109138",
-              "title": "",
-              "label": "View fee details",
-              "type": 2,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": true
-            },
-            "location": {
-              "href": "",
-              "title": "",
-              "label": "Memorial Park Tennis Courts - 1401 Olympic Blvd.",
-              "type": 0,
-              "unit": "",
-              "show_all_inclusive_pricing": false,
-              "enable_all_inclusive_pricing": false
-            },
-            "name": "Sunday Mixed Pickleball 3.5 to 4.0 League",
-            "days_of_week": "Sun",
-            "date_range_start": "2026-08-02",
-            "date_range_end": "2026-09-20",
-            "date_range_description": "",
-            "date_range": "August 2, 2026 to September 20, 2026",
-            "time_range_landing_page": "3:30 PM - 7:30 PM",
-            "openings": "5",
-            "ages": "18 - 99"
+            "time_range_landing_page": "6:00 PM - 7:00 PM"
           }
         ]
       }
@@ -1704,13 +1536,13 @@
   ],
   "misc_captured_responses": [
     {
-      "url": "https://anc.apm.activecommunities.com/santamonicarecreation/rest/activities/filters?locale=en-US&ui_random=1789938559022",
+      "url": "https://anc.apm.activecommunities.com/santamonicarecreation/rest/activities/filters?locale=en-US&ui_random=1789946210428",
       "method": "GET",
       "status": 200,
       "body": "{\"headers\":{\"sessionRefreshedOn\":null,\"sessionExtendedCount\":0,\"response_code\":\"0000\",\"response_message\":\"Successful\",\"page_info\":{\"order_by\":\"\",\"order_option\":\"ASC\",\"total_page\":1,\"total_records_per_page\":20,\"total_records\":0,\"page_number\":1}},\"body\":{\"instructors\":[{\"id\":\"385\",\"desc\":\"Successful Students & Athletes\"},{\"id\":\"371\",\"desc\":\"Music 'N Motion\"},{\"id\":\"334\",\"desc\":\"Playsmart Education (Lego Marty)\"},{\"id\":\"335\",\"desc\":\"Theatre 31\"},{\"id\":\"342\",\"desc\":\"Spanish 4 You\"},{\"id\":\"84\",\"desc\":\"Mano A\"},{\"id\":\"480\",\"desc\":\"A Yummy Future A Yummy Future\"},{\"id\":\"456\",\"desc\":\"Athena Abacan\"},{\"id\":\"332\",\"desc\":\"Grace Akhrem\"},{\"id\":\"197\",\"desc\":\"Diana Albarracin - LA Spanish School\"},{\"id\":\"224\",\"desc\":\"Mesha Allen-Dutton\"},{\"id\":\"470\",\"desc\":\"Fit Kids America\"},{\"id\":\"474\",\"desc\":\"Santa Monica Baseball Academy Andee\"},{\"id\":\"479\",\"desc\":\"Aqualillies Aqualillies\"},{\"id\":\"309\",\"desc\":\"Institute For Art & Olfaction\"},{\"id\":\"459\",\"desc\":\"Amazing Athletes\"},{\"id\":\"317\",\"desc\":\"Zeina Baltagi\"},{\"id\":\"325\",\"desc\":\"Monica Banach\"},{\"id\":\"303\",\"desc\":\"Jen & Barb\"},{\"id\":\"407\",\"desc\":\"Santa Monica Baseball Academy\"},{\"id\":\"368\",\"desc\":\"Amy Bauer\"},{\"id\":\"254\",\"desc\":\"Cheryl Bayer\"},{\"id\":\"373\",\"desc\":\"Engineering For Kids Beach Cities LA\"},{\"id\":\"352\",\"desc\":\"Sinjin Beach Volleyball Camps\"},{\"id\":\"382\",\"desc\":\"Ludis Benitez\"},{\"id\":\"397\",\"desc\":\"Dinah Berland\"},{\"id\":\"390\",\"desc\":\"Jeanne Bjorn\"},{\"id\":\"383\",\"desc\":\"Jessica Bley\"},{\"id\":\"218\",\"desc\":\"Soccer Brit West\"},{\"id\":\"403\",\"desc\":\"Tracy Bromwich\"},{\"id\":\"160\",\"desc\":\"Austin Brown\"},{\"id\":\"170\",\"desc\":\"Bruce Brown\"},{\"id\":\"336\",\"desc\":\"Yoga Buddies\"},{\"id\":\"180\",\"desc\":\"Natasha Burgos\"},{\"id\":\"452\",\"desc\":\"Daniel Burke\"},{\"id\":\"270\",\"desc\":\"Movies By Kids\"},{\"id\":\"281\",\"desc\":\"Angharad Caceres\"},{\"id\":\"163\",\"desc\":\"Renshinkhan California\"},{\"id\":\"391\",\"desc\":\"Jennifer Caloyeras\"},{\"id\":\"292\",\"desc\":\"Cheryl Cambras\"},{\"id\":\"421\",\"desc\":\"Kerry Campbell\"},{\"id\":\"179\",\"desc\":\"Rick Carberry\"},{\"id\":\"291\",\"desc\":\"ReDiscover Center\"},{\"id\":\"416\",\"desc\":\"Stacie Chaiken\"},{\"id\":\"175\",\"desc\":\"Barbara Challis\"},{\"id\":\"451\",\"desc\":\"Ray Fan-Jui Chang\"},{\"id\":\"406\",\"desc\":\"Maxine Chernoff\"},{\"id\":\"37\",\"desc\":\"Academic Chess\"},{\"id\":\"121\",\"desc\":\"Raymond Cidrington\"},{\"id\":\"187\",\"desc\":\"Radio Club\"},{\"id\":\"226\",\"desc\":\"Matt Colchamiro\"},{\"id\":\"238\",\"desc\":\"Anna Cole\"},{\"id\":\"167\",\"desc\":\"Joan Coleman\"},{\"id\":\"173\",\"desc\":\"Lynda Coleman\"},{\"id\":\"448\",\"desc\":\"Santa Monica Tennis Collective\"},{\"id\":\"94\",\"desc\":\"Don Condon\"},{\"id\":\"337\",\"desc\":\"Santa Monica Conservatory Of Music\"},{\"id\":\"299\",\"desc\":\"Brendan Constantine\"},{\"id\":\"472\",\"desc\":\"Pickleball Coordinator\"},{\"id\":\"360\",\"desc\":\"Alyssa Cornejo\"},{\"id\":\"384\",\"desc\":\"Starwin Corporation\"},{\"id\":\"414\",\"desc\":\"Amy Cramer\"},{\"id\":\"288\",\"desc\":\"Sew Cranky\"},{\"id\":\"359\",\"desc\":\"Andrea Cruz\"},{\"id\":\"205\",\"desc\":\"Cindy Cruz\"},{\"id\":\"116\",\"desc\":\"Jaime Cruz\"},{\"id\":\"449\",\"desc\":\"Cabeza De Vaca Cultural Dance School\"},{\"id\":\"425\",\"desc\":\"Laura Darlington\"},{\"id\":\"439\",\"desc\":\"Laura Davis\"},{\"id\":\"208\",\"desc\":\"Gabriela De Los Santos\"},{\"id\":\"483\",\"desc\":\"Marcelo De Oliveira Aquino\"},{\"id\":\"374\",\"desc\":\"Debra Disman\"},{\"id\":\"324\",\"desc\":\"Funky Divas & Dudes\"},{\"id\":\"328\",\"desc\":\"Peggy Dobreer\"},{\"id\":\"458\",\"desc\":\"Zach Dorn\"},{\"id\":\"387\",\"desc\":\"Digital Dragon\"},{\"id\":\"427\",\"desc\":\"Griffin Dyeworks\"},{\"id\":\"477\",\"desc\":\"Brains And Motion Education\"},{\"id\":\"437\",\"desc\":\"Health Edutainment\"},{\"id\":\"485\",\"desc\":\"Shadi Eghbali\"},{\"id\":\"411\",\"desc\":\"LIFT Enrichment\"},{\"id\":\"341\",\"desc\":\"Parker-Anderson Enrichment\"},{\"id\":\"148\",\"desc\":\"Monique Evans\"},{\"id\":\"247\",\"desc\":\"Michael Everding\"},{\"id\":\"465\",\"desc\":\"Sample Example\"},{\"id\":\"463\",\"desc\":\"Venice Family Clinic\"},{\"id\":\"93\",\"desc\":\"Carla Fantozzi\"},{\"id\":\"215\",\"desc\":\"Shabnam Fasa\"},{\"id\":\"157\",\"desc\":\"LA Int'l Fencing Center\"},{\"id\":\"392\",\"desc\":\"LA Fibershed\"},{\"id\":\"120\",\"desc\":\"Angel Figueroa\"},{\"id\":\"422\",\"desc\":\"Echo Park Film Center\"},{\"id\":\"165\",\"desc\":\"Fresh i Films\"},{\"id\":\"138\",\"desc\":\"Creative Fire\"},{\"id\":\"476\",\"desc\":\"Peggy Fisher\"},{\"id\":\"200\",\"desc\":\"Jump Kids Fitness\"},{\"id\":\"16\",\"desc\":\"Anna Flynn\"},{\"id\":\"316\",\"desc\":\"Jenn Fox\"},{\"id\":\"44\",\"desc\":\"Peter Fox\"},{\"id\":\"273\",\"desc\":\"Lydia Freeman\"},{\"id\":\"145\",\"desc\":\"Eula Fritz\"},{\"id\":\"98\",\"desc\":\"Eula Fritz\"},{\"id\":\"467\",\"desc\":\"Ken Fujimori\"},{\"id\":\"364\",\"desc\":\"Sheila Geiger\"},{\"id\":\"307\",\"desc\":\"Gary Geraths\"},{\"id\":\"214\",\"desc\":\"Michael Gerber\"},{\"id\":\"431\",\"desc\":\"Dahn Gim\"},{\"id\":\"28\",\"desc\":\"Richard Goldenson And Staff\"},{\"id\":\"353\",\"desc\":\"Sarah Goldman\"},{\"id\":\"134\",\"desc\":\"Total Golf Adventures\"},{\"id\":\"358\",\"desc\":\"Arthur Guzman\"},{\"id\":\"115\",\"desc\":\"LA School of Gymnastics\"},{\"id\":\"33\",\"desc\":\"Broadway Gymnastics School\"},{\"id\":\"432\",\"desc\":\"Mimi Haddon\"},{\"id\":\"398\",\"desc\":\"Jeremy Hahn\"},{\"id\":\"301\",\"desc\":\"DJ Hall\"},{\"id\":\"378\",\"desc\":\"Zeal Harris\"},{\"id\":\"363\",\"desc\":\"Jenny Hart\"},{\"id\":\"287\",\"desc\":\"Luke Haynes\"},{\"id\":\"284\",\"desc\":\"Corina Haywood\"},{\"id\":\"172\",\"desc\":\"Bruce Hearn\"},{\"id\":\"381\",\"desc\":...<truncated>"
     },
     {
-      "url": "https://anc.apm.activecommunities.com/santamonicarecreation/rest/common/logincheck?locale=en-US&options=%5Bobject%20Object%5D&ui_random=1789938559058",
+      "url": "https://anc.apm.activecommunities.com/santamonicarecreation/rest/common/logincheck?locale=en-US&options=%5Bobject%20Object%5D&ui_random=1789946210481",
       "method": "GET",
       "status": 202,
       "body": "{\"headers\":{\"sessionRefreshedOn\":null,\"sessionExtendedCount\":0,\"response_code\":\"0021\",\"response_message\":\"User not login\",\"page_info\":{\"order_by\":\"\",\"order_option\":\"ASC\",\"total_page\":1,\"total_records_per_page\":20,\"total_records\":0,\"page_number\":1}},\"body\":{}}"
