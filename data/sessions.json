@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-03T08:17:22.121909+00:00",
+  "scraped_at": "2026-10-03T13:30:00.238626+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
   "session_count": 8,
   "sessions": [
@@ -13,8 +13,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 27,
-      "spots_taken": 77,
+      "spots_left": 26,
+      "spots_taken": 78,
       "spots_total": 104,
       "activity_number": "7910.006",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108219?locale=en-US",
@@ -30,8 +30,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 52,
-      "spots_taken": 52,
+      "spots_left": 51,
+      "spots_taken": 53,
       "spots_total": 104,
       "activity_number": "7910.007",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108203?locale=en-US",
@@ -47,8 +47,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 45,
-      "spots_taken": 59,
+      "spots_left": 44,
+      "spots_taken": 60,
       "spots_total": 104,
       "activity_number": "7910.008",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108228?locale=en-US",
@@ -102,7 +102,7 @@
       "spots_taken": 57,
       "spots_total": 90,
       "activity_number": "7910.003",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108204?locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108204?wishlist_id=0&locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-oct-3-session-2/108204?locale=en-US"
     },
     {
