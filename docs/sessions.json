@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-21T07:41:50.896327+00:00",
+  "scraped_at": "2026-11-21T15:53:47.125414+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
   "session_count": 11,
   "sessions": [
@@ -13,8 +13,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 46,
-      "spots_taken": 58,
+      "spots_left": 43,
+      "spots_taken": 61,
       "spots_total": 104,
       "activity_number": "7911.027",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108282?locale=en-US",
@@ -102,7 +102,7 @@
       "spots_taken": 0,
       "spots_total": 104,
       "activity_number": "7911.030",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108293?wishlist_id=0&locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108293?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sat-nov-28-session-1/108293?locale=en-US"
     },
     {
@@ -115,11 +115,11 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 90,
-      "spots_taken": 0,
+      "spots_left": 89,
+      "spots_taken": 1,
       "spots_total": 90,
       "activity_number": "7911.031",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108297?wishlist_id=0&locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108297?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sat-nov-28-session-2/108297?locale=en-US"
     },
     {
@@ -132,8 +132,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 33,
-      "spots_taken": 71,
+      "spots_left": 31,
+      "spots_taken": 73,
       "spots_total": 104,
       "activity_number": "7911.025",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108272?locale=en-US",
@@ -149,8 +149,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 26,
-      "spots_taken": 64,
+      "spots_left": 24,
+      "spots_taken": 66,
       "spots_total": 90,
       "activity_number": "7911.026",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108273?locale=en-US",
