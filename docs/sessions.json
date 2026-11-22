@@ -1,7 +1,7 @@
 {
-  "scraped_at": "2026-11-22T08:46:16.772766+00:00",
+  "scraped_at": "2026-11-22T16:52:07.581848+00:00",
   "source_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list&activity_keyword=pickleball",
-  "session_count": 10,
+  "session_count": 9,
   "sessions": [
     {
       "id": "108282",
@@ -13,8 +13,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 27,
-      "spots_taken": 77,
+      "spots_left": 26,
+      "spots_taken": 78,
       "spots_total": 104,
       "activity_number": "7911.027",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108282?locale=en-US",
@@ -64,8 +64,8 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 65,
-      "spots_taken": 39,
+      "spots_left": 64,
+      "spots_taken": 40,
       "spots_total": 104,
       "activity_number": "7911.029",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108266?locale=en-US",
@@ -98,29 +98,12 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 89,
-      "spots_taken": 1,
+      "spots_left": 88,
+      "spots_taken": 2,
       "spots_total": 90,
       "activity_number": "7911.031",
       "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108297?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sat-nov-28-session-2/108297?locale=en-US"
-    },
-    {
-      "id": "108272",
-      "name": "Pickleball Drop-In, Sun., Nov. 22, Session 1",
-      "day": "Sun",
-      "date": "2026-11-22",
-      "time": "8:00 AM - 11:00 AM",
-      "date_range": "November 22, 8-11am",
-      "location": "Memorial Park",
-      "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
-      "status": "Open",
-      "spots_left": 1,
-      "spots_taken": 103,
-      "spots_total": 104,
-      "activity_number": "7911.025",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108272?locale=en-US",
-      "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-nov-22-session-1/108272?locale=en-US"
     },
     {
       "id": "108273",
@@ -136,7 +119,7 @@
       "spots_taken": 82,
       "spots_total": 90,
       "activity_number": "7911.026",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108273?locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108273?wishlist_id=0&locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-nov-22-session-2/108273?locale=en-US"
     },
     {
@@ -149,11 +132,11 @@
       "location": "Memorial Park",
       "location_full": "1401 Olympic Blvd. Memorial Park Tennis/Pickleball Courts",
       "status": "Open",
-      "spots_left": 104,
-      "spots_taken": 0,
+      "spots_left": 103,
+      "spots_taken": 1,
       "spots_total": 104,
       "activity_number": "7911.032",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108274?wishlist_id=0&locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108274?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-nov-29-session-1/108274?locale=en-US"
     },
     {
@@ -170,7 +153,7 @@
       "spots_taken": 0,
       "spots_total": 90,
       "activity_number": "7911.033",
-      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108275?wishlist_id=0&locale=en-US",
+      "register_url": "https://anc.apm.activecommunities.com/santamonicarecreation/activity/search/enroll/108275?locale=en-US",
       "detail_url": "https://apm.activecommunities.com/santamonicarecreation/Activity_Search/pickleball-drop-in-sun-nov-29-session-2/108275?locale=en-US"
     }
   ]
